@@ -4,6 +4,7 @@ let limit=10;
 let category='dogs';
 const GetData = async (categ, {setResult}) =>{
     category=categ;
+    console.log(category);
    const data=await fetch(url+api_key+'&q='+category+'&limit='+limit);
    const gifs_json=await data.json();
    console.log(gifs_json.data);

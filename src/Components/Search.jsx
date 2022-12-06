@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GetData from '../js/getdata';
 const Search = () =>{
-    const [categ, setCateg]=useState(''); 
-  const [result, setResult]=useState(false); 
+  const [categ, setCateg]=useState(''); 
+  const [result, setResult]=useState(false);
+  
+  const buscar =()=>(
+    setResult(null)    ,
+    GetData(categ,{setResult})
+  )  
   
   return (
     <>
@@ -12,16 +17,16 @@ const Search = () =>{
       )}/>
       <p className='text-secondary'>Buscando: {categ}</p>
       <div className='m-3'>
-      <button className='btn btn-primary m-1' onClick={()=>(GetData(categ,{setResult}))} style={{width:('100px')}}>Buscar</button>    
-      <button className="btn text-white m-1 border" onClick={()=>(setCateg(null), setResult(false))} style={{width:('100px')}}>Borrar</button>
+      <button className='btn btn-primary m-1' onClick={buscar} style={{width:('100px')}}>Buscar</button>    
+      <button className="btn text-white m-1 border" onClick={(e)=>(setCateg(null), setResult(false))} style={{width:('100px')}}>Borrar</button>
       </div>
       </div>
       <div className='container-fluid d-flex flex-wrap align-content-center justify-content-center'>
         {result ? (
             <>              
               {result.map((r,index)=>(
-                <div className="card bg-transparent" key={index} style={{maxWidth:('250px'), maxHeight:('350px')}}>
-                  <img className="card-img-top" src={r.images.original.url} alt="Title" />                  
+                <div className="bg-transparent border-0 m-2" key={index} style={{width:('150px'), maxHeight:('200px')}}>
+                  <img className="card-img-top rounded" src={r.images.original.url} alt="Title" />                  
                 </div>
               ))}
             </>
