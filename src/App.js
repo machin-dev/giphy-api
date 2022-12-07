@@ -1,16 +1,15 @@
 import './App.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/style/myStyle.css';
 import Navegacion from './Components/Nav';
 import Search from './Components/Search';
-import { useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Trending from './Components/Trending';
 
 function App() {
   return(
-    <div className='vh-100 w-100 bg-dark position-relative'>
+    <div className='container-fluid vh-100 p-0 bg-dark '>
     <Router>    
       <Navegacion />
       <Routes>
