@@ -1,6 +1,6 @@
 const api_key='api_key=ERjTFswRbCDVsoFx7JV8Kza4fJhkOpJA';
 const url='https://api.giphy.com/v1/gifs/search?';
-let limit=10;
+let limit=20;
 let category='dogs';
 const GetData = async (categ, {setResult}) =>{
     category=categ;
