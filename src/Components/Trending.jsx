@@ -7,13 +7,13 @@ const Trending = () =>{
     const [trend, setTrend]=useState(null)
     
     useEffect(()=>(
-        GetTrending({setTrend}),
-        console.log(trend)
+       GetTrending({setTrend}) ,
+       console.log(trend)      
     ),[])
     return(
         <div className="container-fluid ">
            <div className="shadow m-2 p-2 text-center">
-            <h1 className="text-primary">The 20 trending stickers
+            <h1 className="text-white ">The 20 trending stickers
              <span className='text-secondary fs-5 d-block'> Enjoy it</span>
             </h1>
            </div>   
@@ -26,7 +26,7 @@ const Trending = () =>{
                      ))
                 ):(
                     <>
-                    <p>Something happened, we can't acces to our database</p>
+                      <p>Something happened, we can't acces to our database</p>
                     </>
                 )}
                      

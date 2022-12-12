@@ -14,7 +14,7 @@ const Navegacion = () =>{
                     <Link  to='/Trending' className="nav-link " id="lnk">Trending</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/' className="nav-link" href="#" id='lnk'>Random</Link>
+                    <Link to='/Random' className="nav-link" href="#" id='lnk'>Random</Link>
                 </li>
                 <li className="nav-item">
                     <Link to='/Search' className="nav-link" id="lnk">Search</Link> 

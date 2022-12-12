@@ -6,6 +6,7 @@ import Search from './Components/Search';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Trending from './Components/Trending';
+import Random from './Components/Random';
 
 function App() {
   return(
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/Home' element={<Home />} />
         <Route path='/Search' element={<Search />} />
+        <Route path='/Random' element={<Random />} />
         <Route path='/Trending' element={<Trending />} />
         <Route path='/' element={<Home />} />
       </Routes>    
