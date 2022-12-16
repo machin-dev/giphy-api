@@ -1,5 +1,6 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap';
 import '../src/style/myStyle.css';
 import Navegacion from './Components/Nav';
 import Search from './Components/Search';
@@ -10,17 +11,18 @@ import Random from './Components/Random';
 
 function App() {
   return(
-    <div className='container-fluid vh-100 p-0 bg-dark '>
-    <Router>    
+    <div className='p-0 bg-dark vh-100'>
+      
+   <Router>    
       <Navegacion />
-      <Routes>
+       <Routes>
         <Route path='/Home' element={<Home />} />
         <Route path='/Search' element={<Search />} />
         <Route path='/Random' element={<Random />} />
         <Route path='/Trending' element={<Trending />} />
         <Route path='/' element={<Home />} />
       </Routes>    
-    </Router>  
+  </Router>  
     </div>  
   );
    

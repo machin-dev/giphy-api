@@ -7,7 +7,7 @@ const Home = () =>{
          <div className="shadow m-3 p-4 text-center">
             <h1 className="text-white" style={{fontSize:('5vh')}}>Giphy</h1>
             <img src={require('../img/200w.webp')}  alt="we did it joe"/>
-            <p className="text-secondary">Find your favorite sticker</p>
+            <p className="text-secondary">Find your favorite gift</p>
         </div>
        </div>
     );
